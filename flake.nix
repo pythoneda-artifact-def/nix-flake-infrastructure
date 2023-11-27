@@ -30,7 +30,7 @@
         "pythoneda-shared-pythoneda-banner";
       inputs.pythoneda-shared-pythoneda-domain.follows =
         "pythoneda-shared-pythoneda-domain";
-      url = "github:pythoneda-artifact-def/nix-flake/0.0.4";
+      url = "github:pythoneda-artifact-def/nix-flake/0.0.5";
     };
     pythoneda-shared-artifact-events = {
       inputs.flake-utils.follows = "flake-utils";
