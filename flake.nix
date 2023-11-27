@@ -32,6 +32,29 @@
         "pythoneda-shared-pythoneda-domain";
       url = "github:pythoneda-artifact-def/nix-flake/0.0.6";
     };
+    pythoneda-shared-artifact-code-events = {
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
+      inputs.pythoneda-shared-pythoneda-banner.follows =
+        "pythoneda-shared-pythoneda-banner";
+      inputs.pythoneda-shared-pythoneda-domain.follows =
+        "pythoneda-shared-pythoneda-domain";
+      url = "github:pythoneda-shared-artifact-def/code-events/0.0.5";
+    };
+    pythoneda-shared-artifact-code-events-infrastructure = {
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
+      inputs.pythoneda-shared-artifact-code-events.follows =
+        "pythoneda-shared-artifact-code-events";
+      inputs.pythoneda-shared-pythoneda-banner.follows =
+        "pythoneda-shared-pythoneda-banner";
+      inputs.pythoneda-shared-pythoneda-domain.follows =
+        "pythoneda-shared-pythoneda-domain";
+      inputs.pythoneda-shared-pythoneda-infrastructure.follows =
+        "pythoneda-shared-pythoneda-infrastructure";
+      url =
+        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.4";
+    };
     pythoneda-shared-artifact-events = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
@@ -132,7 +155,9 @@
         shared = import "${pythoneda-shared-pythoneda-banner}/nix/shared.nix";
         pkgs = import nixos { inherit system; };
         pythoneda-artifact-nix-flake-infrastructure-for = { python
-          , pythoneda-artifact-nix-flake, pythoneda-shared-artifact-events
+          , pythoneda-artifact-nix-flake, pythoneda-shared-artifact-code-events
+          , pythoneda-shared-artifact-code-events-infrastructure
+          , pythoneda-shared-artifact-events
           , pythoneda-shared-artifact-events-infrastructure
           , pythoneda-shared-code-requests-jupyterlab
           , pythoneda-shared-code-requests-shared
@@ -161,6 +186,10 @@
               package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
               pythonMajorMinor = pythonMajorMinorVersion;
               pythonedaArtifactNixFlake = pythoneda-artifact-nix-flake.version;
+              pythonedaSharedArtifactCodeEvents =
+                pythoneda-shared-artifact-code-events.version;
+              pythonedaSharedArtifactCodeEventsInfrastructure =
+                pythoneda-shared-artifact-code-events-infrastructure.version;
               pythonedaSharedArtifactEvents =
                 pythoneda-shared-artifact-events.version;
               pythonedaSharedArtifactEventsInfrastructure =
@@ -191,6 +220,8 @@
               dbus-next
               joblib
               pythoneda-artifact-nix-flake
+              pythoneda-shared-artifact-code-events
+              pythoneda-shared-artifact-code-events-infrastructure
               pythoneda-shared-artifact-events
               pythoneda-shared-artifact-events-infrastructure
               pythoneda-shared-code-requests-jupyterlab
@@ -307,6 +338,10 @@
               python = pkgs.python38;
               pythoneda-artifact-nix-flake =
                 pythoneda-artifact-nix-flake.packages.${system}.pythoneda-artifact-nix-flake-python38;
+              pythoneda-shared-artifact-code-events =
+                pythoneda-shared-artifact-code-events.packages.${system}.pythoneda-shared-artifact-code-events-python38;
+              pythoneda-shared-artifact-code-events-infrastructure =
+                pythoneda-shared-artifact-code-events-infrastructure.packages.${system}.pythoneda-shared-artifact-code-events-infrastructure-python38;
               pythoneda-shared-artifact-events =
                 pythoneda-shared-artifact-events.packages.${system}.pythoneda-shared-artifact-events-python38;
               pythoneda-shared-artifact-events-infrastructure =
@@ -327,6 +362,10 @@
               python = pkgs.python39;
               pythoneda-artifact-nix-flake =
                 pythoneda-artifact-nix-flake.packages.${system}.pythoneda-artifact-nix-flake-python39;
+              pythoneda-shared-artifact-code-events =
+                pythoneda-shared-artifact-code-events.packages.${system}.pythoneda-shared-artifact-code-events-python39;
+              pythoneda-shared-artifact-code-events-infrastructure =
+                pythoneda-shared-artifact-code-events-infrastructure.packages.${system}.pythoneda-shared-artifact-code-events-infrastructure-python39;
               pythoneda-shared-artifact-events =
                 pythoneda-shared-artifact-events.packages.${system}.pythoneda-shared-artifact-events-python39;
               pythoneda-shared-artifact-events-infrastructure =
@@ -347,6 +386,10 @@
               python = pkgs.python310;
               pythoneda-artifact-nix-flake =
                 pythoneda-artifact-nix-flake.packages.${system}.pythoneda-artifact-nix-flake-python310;
+              pythoneda-shared-artifact-code-events =
+                pythoneda-shared-artifact-code-events.packages.${system}.pythoneda-shared-artifact-code-events-python310;
+              pythoneda-shared-artifact-code-events-infrastructure =
+                pythoneda-shared-artifact-code-events-infrastructure.packages.${system}.pythoneda-shared-artifact-code-events-infrastructure-python310;
               pythoneda-shared-artifact-events =
                 pythoneda-shared-artifact-events.packages.${system}.pythoneda-shared-artifact-events-python310;
               pythoneda-shared-artifact-events-infrastructure =
@@ -367,6 +410,10 @@
               python = pkgs.python311;
               pythoneda-artifact-nix-flake =
                 pythoneda-artifact-nix-flake.packages.${system}.pythoneda-artifact-nix-flake-python311;
+              pythoneda-shared-artifact-code-events =
+                pythoneda-shared-artifact-code-events.packages.${system}.pythoneda-shared-artifact-code-events-python311;
+              pythoneda-shared-artifact-code-events-infrastructure =
+                pythoneda-shared-artifact-code-events-infrastructure.packages.${system}.pythoneda-shared-artifact-code-events-infrastructure-python311;
               pythoneda-shared-artifact-events =
                 pythoneda-shared-artifact-events.packages.${system}.pythoneda-shared-artifact-events-python311;
               pythoneda-shared-artifact-events-infrastructure =
