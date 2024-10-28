@@ -19,7 +19,7 @@
 {
   description = "Infrastructure layer of pythoneda-artifact/nix-flake";
   inputs = rec {
-    nixos.url = "github:NixOS/nixpkgs/23.11";
+    nixos.url = "github:NixOS/nixpkgs/24.05";
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     pythoneda-artifact-nix-flake = {
       inputs.flake-utils.follows = "flake-utils";
