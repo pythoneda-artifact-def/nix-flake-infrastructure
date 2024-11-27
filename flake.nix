@@ -30,7 +30,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-artifact-def/nix-flake/0.0.57";
+      url = "github:pythoneda-artifact-def/nix-flake/0.0.58";
     };
     pythoneda-shared-artifact-code-events = {
       inputs.flake-utils.follows = "flake-utils";
@@ -88,7 +88,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-code-requests-def/jupyterlab/0.0.55";
+      url = "github:pythoneda-shared-code-requests-def/jupyterlab/0.0.56";
     };
     pythoneda-shared-code-requests-shared = {
       inputs.flake-utils.follows = "flake-utils";
@@ -97,7 +97,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-code-requests-def/shared/0.0.54";
+      url = "github:pythoneda-shared-code-requests-def/shared/0.0.55";
     };
     pythoneda-shared-nix-flake-shared = {
       inputs.flake-utils.follows = "flake-utils";
@@ -118,7 +118,7 @@
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.86";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.87";
     };
     pythoneda-shared-pythonlang-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -136,8 +136,8 @@
       let
         org = "pythoneda-artifact";
         repo = "nix-flake-infrastructure";
-        version = "0.0.9";
-        sha256 = "0215nf2qcpdiv08hvx3baavdy5z5wbxwc16ymwn68q74czvl1wxk";
+        version = "0.0.10";
+        sha256 = "16qaivinmpnpxzjs0q9nwp8dzv258bcjnsr8rnpw1nfgfjl4dynv";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.artifact.nix.flake.infrastructure";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
