@@ -30,7 +30,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-artifact-def/nix-flake/0.0.73";
+      url = "github:pythoneda-artifact-def/nix-flake/0.0.74";
     };
     pythoneda-shared-artifact-code-events = {
       inputs.flake-utils.follows = "flake-utils";
@@ -39,7 +39,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-artifact-def/code-events/0.0.72";
+      url = "github:pythoneda-shared-artifact-def/code-events/0.0.73";
     };
     pythoneda-shared-artifact-code-events-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -53,7 +53,7 @@
       inputs.pythoneda-shared-pythonlang-infrastructure.follows =
         "pythoneda-shared-pythonlang-infrastructure";
       url =
-        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.76";
+        "github:pythoneda-shared-artifact-def/code-events-infrastructure/0.0.77";
     };
     pythoneda-shared-artifact-events = {
       inputs.flake-utils.follows = "flake-utils";
@@ -62,7 +62,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-artifact-def/events/0.0.80";
+      url = "github:pythoneda-shared-artifact-def/events/0.0.81";
     };
     pythoneda-shared-artifact-events-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -75,7 +75,7 @@
         "pythoneda-shared-pythonlang-domain";
       inputs.pythoneda-shared-pythonlang-infrastructure.follows =
         "pythoneda-shared-pythonlang-infrastructure";
-      url = "github:pythoneda-shared-artifact-def/events-infrastructure/0.0.70";
+      url = "github:pythoneda-shared-artifact-def/events-infrastructure/0.0.71";
     };
     pythoneda-shared-code-requests-jupyterlab = {
       inputs.flake-utils.follows = "flake-utils";
@@ -88,7 +88,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-code-requests-def/jupyterlab/0.0.71";
+      url = "github:pythoneda-shared-code-requests-def/jupyterlab/0.0.72";
     };
     pythoneda-shared-code-requests-shared = {
       inputs.flake-utils.follows = "flake-utils";
@@ -97,7 +97,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-code-requests-def/shared/0.0.70";
+      url = "github:pythoneda-shared-code-requests-def/shared/0.0.71";
     };
     pythoneda-shared-nix-flake-shared = {
       inputs.flake-utils.follows = "flake-utils";
@@ -106,7 +106,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-nix-flake-def/shared/0.0.87";
+      url = "github:pythoneda-shared-nix-flake-def/shared/0.0.88";
     };
     pythoneda-shared-pythonlang-banner = {
       inputs.flake-utils.follows = "flake-utils";
@@ -118,7 +118,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.107";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.108";
     };
     pythoneda-shared-pythonlang-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -127,7 +127,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-pythonlang-def/infrastructure/0.0.82";
+      url = "github:pythoneda-shared-pythonlang-def/infrastructure/0.0.83";
     };
   };
   outputs = inputs:
@@ -136,8 +136,8 @@
       let
         org = "pythoneda-artifact";
         repo = "nix-flake-infrastructure";
-        version = "0.0.10";
-        sha256 = "16qaivinmpnpxzjs0q9nwp8dzv258bcjnsr8rnpw1nfgfjl4dynv";
+        version = "0.0.11";
+        sha256 = "1f4ja45vdwicj4d2niz5sm5ns12qhavf7icsxndr1ghlwda3qflw";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.artifact.nix.flake.infrastructure";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
